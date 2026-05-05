@@ -4,7 +4,7 @@ import { whatsappUrl } from "@/utils/whatsapp";
 
 export default function FinalCtaSection() {
   return (
-    <section className="section-spacing">
+    <section id="contacto" className="section-spacing scroll-mt-28">
       <Container>
         <Reveal className="mx-auto max-w-5xl rounded-[3rem] border border-vh-lavender/70 bg-white/60 px-6 py-18 text-center shadow-[0_24px_80px_rgba(28,42,66,0.06)] md:px-12 md:py-24">
           <p className="eyebrow">Primer paso</p>

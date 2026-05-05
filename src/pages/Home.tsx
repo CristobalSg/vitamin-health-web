@@ -1,7 +1,6 @@
 import AuthoritySection from "@/sections/AuthoritySection";
 import BaseLayout from "@/layout/BaseLayout";
 import BalanceSection from "@/sections/BalanceSection";
-import ContentAndSocialSection from "@/sections/ContentAndSocialSection";
 import ExperienceSection from "@/sections/ExperienceSection";
 import FinalCtaSection from "@/sections/FinalCtaSection";
 import HeroSection from "@/sections/HeroSection";
@@ -21,7 +20,6 @@ export default function Home() {
       <ProcessSection />
       <AuthoritySection />
       <ServicesSection />
-      <ContentAndSocialSection />
       <ExperienceSection />
       <LocationSection />
       <FinalCtaSection />

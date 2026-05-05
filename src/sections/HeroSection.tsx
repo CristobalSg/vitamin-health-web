@@ -32,9 +32,7 @@ export default function HeroSection() {
               Agendar evaluación
             </a>
             <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#servicios"
               className="inline-flex min-h-12 items-center justify-center rounded-full border border-vh-white/70 bg-vh-white/10 px-7 py-4 text-sm font-semibold text-vh-white backdrop-blur transition-colors hover:bg-vh-white/20 focus:outline-none focus:ring-2 focus:ring-vh-white/80 focus:ring-offset-2 focus:ring-offset-transparent"
             >
               Conocer tratamientos

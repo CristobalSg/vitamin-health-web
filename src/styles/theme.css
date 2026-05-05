@@ -76,6 +76,49 @@ img {
   color: #1c2a42;
 }
 
+@keyframes floating-chat-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 14px, 0) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes floating-chat-breathe {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+@keyframes floating-chat-expand {
+  from {
+    opacity: 0.82;
+    border-radius: 2rem;
+    transform: translate3d(0, 0, 0) scale(0.18);
+  }
+
+  62% {
+    opacity: 1;
+    border-radius: 2.1rem;
+    transform: translate3d(0, 0, 0) scale(1.015);
+  }
+
+  to {
+    opacity: 1;
+    border-radius: 2rem;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
 @layer components {
   .container {
     @apply mx-auto w-full max-w-7xl px-6 md:px-8;

@@ -48,7 +48,7 @@ function SocialIcon({ icon }: SocialIconProps) {
 
 export default function Footer() {
   return (
-    <footer id="contacto" className="border-t border-black/10 bg-vh-gray py-14 text-vh-navy">
+    <footer className="border-t border-black/10 bg-vh-gray py-14 text-vh-navy">
       <Container>
         <Reveal className="grid gap-10 md:grid-cols-[1.25fr_0.75fr_0.8fr_0.7fr]">
           <div>
@@ -102,7 +102,7 @@ export default function Footer() {
         </Reveal>
 
         <Reveal className="mt-12 border-t border-black/10 pt-7 text-xs text-vh-blue" delay={100}>
-          <p>© 2026 Vitamin Health. Todos los derechos reservados.</p>
+          <p>Vitamin Health© Temuco – Chile. Todos los derechos reservados.</p>
         </Reveal>
       </Container>
     </footer>
