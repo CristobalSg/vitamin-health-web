@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import Container from "@/components/Container";
 import { whatsappUrl } from "@/utils/whatsapp";
@@ -13,6 +13,7 @@ const navigationItems = [
 ];
 
 export default function Header() {
+  const headerRef = useRef<HTMLElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -33,7 +34,38 @@ export default function Header() {
     setIsMenuOpen(false);
   };
 
-  const headerTone = isScrolled ? "bg-vh-gray/92 text-vh-navy backdrop-blur-xl border-black/10" : "border-transparent bg-transparent text-vh-white";
+  useEffect(() => {
+    if (!isMenuOpen) {
+      return;
+    }
+
+    const handlePointerDown = (event: PointerEvent) => {
+      if (headerRef.current?.contains(event.target as Node)) {
+        return;
+      }
+
+      closeMenu();
+    };
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        closeMenu();
+      }
+    };
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isMenuOpen]);
+
+  const headerTextTone = isScrolled ? "text-vh-navy" : "text-vh-white";
+  const headerSurfaceTone = isScrolled
+    ? "border-black/10 bg-vh-gray/92 backdrop-blur-xl"
+    : "border-transparent bg-transparent";
   const linkTone = isScrolled ? "text-vh-blue hover:text-vh-ink" : "text-vh-white/90 hover:text-vh-white";
   const ctaClassName = isScrolled
     ? "btn-primary min-h-11 px-5 py-3"
@@ -45,10 +77,15 @@ export default function Header() {
     ? "border-black/10 bg-vh-gray/95 text-vh-blue backdrop-blur-xl"
     : "border-vh-white/20 bg-black/35 text-vh-white/90 backdrop-blur-xl";
   const mobileLinkTone = isScrolled ? "hover:bg-white/55 hover:text-vh-ink" : "hover:bg-vh-white/10 hover:text-vh-white";
+  const mobileCtaTone = isScrolled
+    ? "border border-vh-navy/15 bg-vh-beige/75 !text-vh-navy shadow-[0_16px_32px_rgba(28,42,66,0.1)] hover:bg-vh-soft-gray focus:ring-vh-navy focus:ring-offset-vh-gray"
+    : "bg-vh-white !text-vh-navy shadow-[0_18px_42px_rgba(0,0,0,0.2)] hover:bg-white focus:ring-vh-white/85 focus:ring-offset-vh-navy";
+  const mobileCtaDividerTone = isScrolled ? "border-vh-lavender/50" : "border-vh-white/15";
 
   return (
-    <header className={`fixed left-0 right-0 top-0 z-50 border-b transition-all duration-300 ease-in-out ${headerTone}`}>
-      <Container>
+    <header ref={headerRef} className={`fixed left-0 right-0 top-0 z-50 transition-colors duration-300 ease-in-out ${headerTextTone}`}>
+      <div className={`absolute inset-x-0 top-0 h-24 border-b transition-all duration-300 ease-in-out ${headerSurfaceTone}`} aria-hidden="true" />
+      <Container className="relative">
         <div className="flex min-h-24 items-center justify-between gap-6">
           <a href="/" className="inline-flex items-center" onClick={closeMenu} aria-label="Vitamin Health">
             <img
@@ -110,15 +147,17 @@ export default function Header() {
                 {item.label}
               </a>
             ))}
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${isScrolled ? "btn-primary" : ctaClassName} mt-3 w-full`}
-              onClick={closeMenu}
-            >
-              Agendar evaluación
-            </a>
+            <div className={`mt-3 border-t px-4 pt-5 ${mobileCtaDividerTone}`}>
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`inline-flex min-h-12 w-full items-center justify-center rounded-full px-6 py-4 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 ${mobileCtaTone}`}
+                onClick={closeMenu}
+              >
+                Agendar evaluación
+              </a>
+            </div>
           </nav>
         </div>
       </Container>
