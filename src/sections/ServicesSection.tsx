@@ -12,19 +12,12 @@ type Treatment = {
 
 const treatments: Treatment[] = [
   {
-    title: "Sueroterapia",
+    title: "vitaminas endovenosas (Sueroterapia)",
     description:
       "Administramos sueros con vitaminas, aminoácidos y minerales formulados según las necesidades de cada paciente.",
     image: new URL("../../img/tratamientos/sueroterapia.webp", import.meta.url).href,
     featured: true,
     imagePosition: "object-[center_42%]",
-  },
-  {
-    title: "Vacuna anti envejecimiento",
-    description:
-      "Reduce la inflamación celular, mejora el sistema inmunológico, acelera el metabolismo y mejora la calidad del sueño.",
-    image: new URL("../../img/tratamientos/vacuna-anti-edad.webp", import.meta.url).href,
-    imagePosition: "object-[center_38%]",
   },
   {
     title: "Medicina General",

@@ -8,7 +8,7 @@ const trustItems = ["Medicina preventiva", "Epigenética", "Estética profesiona
 export default function HeroSection() {
   return (
     <section
-      className="relative flex min-h-screen overflow-hidden bg-cover bg-center"
+      className="relative flex min-h-screen overflow-hidden bg-cover bg-[65%_center] md:bg-center"
       style={{ backgroundImage: `url(${heroBackground})` }}
     >
       <div className="absolute inset-0 bg-black/30" aria-hidden="true" />
@@ -21,7 +21,7 @@ export default function HeroSection() {
         <div className="mx-auto max-w-2xl text-center text-vh-white lg:mx-0 lg:text-left">
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-vh-white/80">Vitamin Health</p>
           <h1 className="mt-7 font-serif text-5xl leading-[0.98] tracking-tight text-balance md:text-7xl">
-            Medicina regenerativa y salud integral con enfoque preventivo
+            Medicina de longevidad
           </h1>
           <p className="mx-auto mt-8 max-w-xl text-base leading-7 text-vh-white/85 md:text-xl md:leading-8 lg:mx-0">
             Unimos medicina preventiva, epigenética y estética para mejorar tu calidad de vida
