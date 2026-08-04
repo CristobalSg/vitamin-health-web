@@ -1,57 +1,7 @@
 import Container from "@/components/Container";
 import Reveal from "@/components/Reveal";
+import { services } from "@/data/services";
 import { whatsappUrl } from "@/utils/whatsapp";
-
-type Treatment = {
-  title: string;
-  description: string;
-  image: string;
-  featured?: boolean;
-  imagePosition?: string;
-};
-
-const treatments: Treatment[] = [
-  {
-    title: "vitaminas endovenosas (Sueroterapia)",
-    description:
-      "Administramos sueros con vitaminas, aminoácidos y minerales formulados según las necesidades de cada paciente.",
-    image: new URL("../../img/tratamientos/sueroterapia.webp", import.meta.url).href,
-    featured: true,
-    imagePosition: "object-[center_42%]",
-  },
-  {
-    title: "Medicina General",
-    description: "Atención médica, certificados, licencias médicas, evaluación de exámenes y apoyo en salud mental.",
-    image: new URL("../../img/tratamientos/medicina-general.webp", import.meta.url).href,
-  },
-  {
-    title: "Atención Psicológica",
-    description: "Terapia enfocada en tratar trastornos, conductas y emociones que afectan tu bienestar.",
-    image: new URL("../../img/tratamientos/psicologia.webp", import.meta.url).href,
-  },
-  {
-    title: "Ácido hialurónico",
-    description: "Biomodelación facial para restaurar volumen y mejorar la armonía del rostro con resultados naturales.",
-    image: new URL("../../img/tratamientos/acido-hialuronico.webp", import.meta.url).href,
-    imagePosition: "object-[center_36%]",
-  },
-  {
-    title: "Toxina botulínica",
-    description: "Suaviza líneas de expresión y arrugas mediante la relajación controlada de los músculos faciales.",
-    image: new URL("../../img/tratamientos/toxina-botulinica.webp", import.meta.url).href,
-    imagePosition: "object-[center_40%]",
-  },
-  {
-    title: "Mesoterapia",
-    description: "Tratamiento con vitaminas y sustancias que rejuvenecen la piel, aportan brillo y mejoran su calidad.",
-    image: new URL("../../img/tratamientos/mesoterapia.webp", import.meta.url).href,
-  },
-  {
-    title: "Plasma rico en plaquetas",
-    description: "Tratamiento que utiliza tu propio plasma para estimular regeneración y fortalecer el crecimiento capilar.",
-    image: new URL("../../img/tratamientos/plasma-plaquetas.webp", import.meta.url).href,
-  },
-];
 
 export default function ServicesSection() {
   return (
@@ -63,7 +13,7 @@ export default function ServicesSection() {
         </Reveal>
 
         <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-4 md:mt-16 md:gap-6 lg:flex lg:snap-x lg:gap-6 lg:overflow-x-auto lg:overflow-y-hidden lg:pb-6 lg:[scrollbar-color:#C8C7D7_transparent] lg:[scrollbar-width:thin] lg:[&::-webkit-scrollbar]:h-1.5 lg:[&::-webkit-scrollbar-thumb]:rounded-full lg:[&::-webkit-scrollbar-thumb]:bg-vh-lavender/70 lg:[&::-webkit-scrollbar-track]:bg-transparent">
-          {treatments.map((treatment, index) => (
+          {services.map((treatment, index) => (
             <Reveal
               as="article"
               key={treatment.title}

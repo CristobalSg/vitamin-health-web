@@ -36,16 +36,16 @@ const processSteps = [
 
 export default function ProcessSection() {
   return (
-    <section id="metodo" className="section-spacing border-y border-black/10 bg-white">
+    <section id="metodo" className="border-y border-black/10 bg-white py-14 md:py-20 lg:py-32">
       <Container>
-        <Reveal className="grid gap-8 lg:grid-cols-[0.72fr_0.88fr_0.4fr] lg:items-end">
+        <Reveal className="grid gap-5 md:gap-8 lg:grid-cols-[0.72fr_0.88fr_0.4fr] lg:items-end">
           <div>
             <p className="eyebrow">Cómo funciona</p>
-            <h2 className="section-title mt-6">
+            <h2 className="section-title mt-4 md:mt-6">
               Un proceso claro, humano y medible
             </h2>
           </div>
-          <p className="section-copy max-w-2xl lg:ml-auto">
+          <p className="max-w-2xl text-sm leading-6 text-vh-blue md:text-lg md:leading-8 lg:ml-auto">
             Cuatro pasos simples para pasar de la inquietud inicial a un plan personalizado con seguimiento profesional.
           </p>
           <div className="hidden aspect-square overflow-hidden rounded-[2rem] border border-vh-lavender/70 bg-vh-beige p-3 lg:block">
@@ -58,18 +58,18 @@ export default function ProcessSection() {
           </div>
         </Reveal>
 
-        <div className="relative mt-16 grid gap-5 lg:grid-cols-4 lg:gap-0">
+        <div className="relative mt-8 grid gap-3 md:mt-12 md:gap-5 lg:mt-16 lg:grid-cols-4 lg:gap-0">
           <div className="absolute left-8 top-0 hidden h-full w-px bg-vh-lavender/70 md:block lg:left-0 lg:top-10 lg:h-px lg:w-full" />
 
           {processSteps.map((step, index) => (
             <Reveal
               as="article"
               key={step.number}
-              className="premium-card relative min-h-[285px] overflow-hidden bg-vh-gray lg:mx-2"
+              className="relative min-h-[156px] overflow-hidden rounded-[1.25rem] border border-vh-lavender/65 bg-vh-gray p-5 transition-colors hover:border-vh-blue/45 md:min-h-[220px] md:rounded-[2rem] md:p-8 lg:mx-2 lg:min-h-[285px]"
               delay={index * 100}
             >
               <div
-                className="absolute -right-10 -top-12 h-40 w-40 overflow-hidden rounded-full border border-white/70 bg-vh-beige md:h-48 md:w-48"
+                className="absolute -right-12 -top-14 h-32 w-32 overflow-hidden rounded-full border border-white/70 bg-vh-beige md:-right-10 md:-top-12 md:h-48 md:w-48"
                 aria-hidden="true"
               >
                 <img
@@ -83,11 +83,11 @@ export default function ProcessSection() {
               <div className="absolute right-10 top-20 hidden h-16 w-16 rounded-full border border-vh-lavender/60 bg-white/45 backdrop-blur-sm md:block" />
 
               <div className="relative z-10">
-                <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-full border border-vh-lavender bg-white font-serif text-3xl tracking-tight text-vh-navy shadow-[0_14px_40px_rgba(28,42,66,0.06)]">
+                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full border border-vh-lavender bg-white font-serif text-xl tracking-tight text-vh-navy shadow-[0_14px_40px_rgba(28,42,66,0.06)] md:mb-8 md:h-16 md:w-16 md:text-3xl">
                   {step.number}
                 </div>
-                <h3 className="font-serif text-2xl tracking-tight text-vh-navy">{step.title}</h3>
-                <p className="mt-4 text-sm leading-6 text-vh-blue">{step.description}</p>
+                <h3 className="font-serif text-xl tracking-tight text-vh-navy md:text-2xl">{step.title}</h3>
+                <p className="mt-2 text-sm leading-5 text-vh-blue md:mt-4 md:leading-6">{step.description}</p>
               </div>
               <span className="sr-only">{step.imageAlt}</span>
             </Reveal>

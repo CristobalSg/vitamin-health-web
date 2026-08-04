@@ -3,10 +3,10 @@ import Reveal from "@/components/Reveal";
 import { whatsappUrl } from "@/utils/whatsapp";
 
 const footerLinks = [
-  { label: "Tratamientos", href: "#servicios" },
-  { label: "Método", href: "#metodo" },
-  { label: "Equipo", href: "#equipo" },
-  { label: "Contacto", href: "#contacto" },
+  { label: "Tratamientos", href: "/#servicios" },
+  { label: "Método", href: "/#metodo" },
+  { label: "Equipo", href: "/#equipo" },
+  { label: "Contacto", href: "/#contacto" },
 ];
 
 const socialLinks = [

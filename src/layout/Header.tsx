@@ -6,10 +6,10 @@ import { whatsappUrl } from "@/utils/whatsapp";
 const logoUrl = "/logo-vh.webp";
 
 const navigationItems = [
-  { label: "Tratamientos", href: "#servicios" },
-  { label: "Método", href: "#metodo" },
-  { label: "Equipo", href: "#equipo" },
-  { label: "Contacto", href: "#contacto" },
+  { label: "Tratamientos", href: "/#servicios" },
+  { label: "Método", href: "/#metodo" },
+  { label: "Equipo", href: "/#equipo" },
+  { label: "Contacto", href: "/#contacto" },
 ];
 
 export default function Header() {
@@ -19,7 +19,7 @@ export default function Header() {
 
   useEffect(() => {
     const updateHeaderState = () => {
-      setIsScrolled(window.scrollY > 40);
+      setIsScrolled(window.scrollY > 40 || window.location.pathname !== "/");
     };
 
     updateHeaderState();
