@@ -23,7 +23,7 @@ export default function AuthoritySection() {
           <div className="mt-8 max-w-2xl rounded-[2rem] border border-vh-white/15 bg-vh-white/8 p-6">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-vh-lavender">Dirección médica</p>
             <p className="mt-3 font-serif text-3xl leading-tight tracking-tight text-vh-white md:text-4xl">
-              Camila Silva
+              Dra. Camila Silva
             </p>
             <p className="mt-2 text-base font-medium leading-7 text-vh-white/80 md:text-lg">
               Médico Cirujano y especialista en Medicina Antiage.

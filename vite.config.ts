@@ -14,13 +14,16 @@ export default defineConfig({
       manifest: {
         name: "Vitamin Health",
         short_name: "Vitamin Health",
+        description: "Medicina regenerativa, salud integral y tratamientos estéticos con enfoque preventivo en Temuco.",
         start_url: "/",
+        scope: "/",
+        lang: "es",
         display: "standalone",
         background_color: "#F5F3F0",
         theme_color: "#1C2A42",
         icons: [
-          { src: "/icons/icon-192x192.png", sizes: "192x192", type: "image/png" },
-          { src: "/icons/icon-512x512.png", sizes: "512x512", type: "image/png" },
+          { src: "/icons/icon-192x192.png", sizes: "192x192", type: "image/png", purpose: "any" },
+          { src: "/icons/icon-512x512.png", sizes: "512x512", type: "image/png", purpose: "any" },
         ],
       },
     }),

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title>Vitamin Health</title>
+  <rect width="512" height="512" rx="96" fill="#1C2A42" />
+  <circle cx="256" cy="256" r="182" fill="none" stroke="#EAE5E0" stroke-width="16" opacity="0.9" />
+  <text
+    x="256"
+    y="302"
+    fill="#F5F3F0"
+    font-family="Georgia, Times New Roman, serif"
+    font-size="176"
+    font-weight="700"
+    letter-spacing="-12"
+    text-anchor="middle"
+  >VH</text>
+</svg>
