@@ -58,6 +58,15 @@
       "index": true
     },
     {
+      "path": "/links",
+      "title": "Enlaces | Vitamin Health Temuco",
+      "description": "Conoce los tratamientos de Vitamin Health Temuco, contáctanos por WhatsApp, visita nuestras redes sociales y descubre nuestro sitio web.",
+      "label": "Enlaces",
+      "schemaType": "WebPage",
+      "kind": "page",
+      "index": true
+    },
+    {
       "path": "/servicios/sueroterapia",
       "title": "Sueroterapia en Temuco | Vitamin Health",
       "description": "Conoce la sueroterapia personalizada de Vitamin Health, con evaluación profesional y protocolos definidos según cada paciente.",

@@ -5,6 +5,7 @@ import { getServiceByPath } from "@/data/services";
 import BaseLayout from "@/layout/BaseLayout";
 import Home from "@/pages/Home";
 import InfoPage from "@/pages/InfoPage";
+import Links from "@/pages/Links";
 import NotFound from "@/pages/NotFound";
 import Proposals from "@/pages/Proposals";
 import ServiceDetail from "@/pages/ServiceDetail";
@@ -66,6 +67,10 @@ const routes: AppRoute[] = [
         <InfoPage kind="contact" />
       </BaseLayout>
     ),
+  },
+  {
+    path: "/links",
+    element: <Links />,
   },
 ];
 
