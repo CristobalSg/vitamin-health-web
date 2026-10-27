@@ -6,7 +6,7 @@ const logoUrl = "/logo-vh.webp";
 const canonicalUrl = "https://www.vitaminhealth.cl/links";
 
 type IconProps = SVGProps<SVGSVGElement> & {
-  name: LinkPageIcon | "share" | "arrow";
+  name: LinkPageIcon | "share" | "arrow" | "location";
 };
 
 function Icon({ name, ...props }: IconProps) {
@@ -66,6 +66,15 @@ function Icon({ name, ...props }: IconProps) {
     );
   }
 
+  if (name === "location") {
+    return (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" {...props}>
+        <path d="M19 10c0 4.8-7 10.5-7 10.5S5 14.8 5 10a7 7 0 1 1 14 0Z" />
+        <circle cx="12" cy="10" r="2.25" />
+      </svg>
+    );
+  }
+
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" {...props}>
       <path d="M5 12h13M13.5 7.5 18 12l-4.5 4.5" />
@@ -83,8 +92,8 @@ export default function Links() {
   const sharePage = async () => {
     try {
       await navigator.share({
-        title: "Vitamin Health Temuco",
-        text: "Conoce Vitamin Health Temuco y nuestros canales de contacto.",
+        title: "Vitamin Health",
+        text: "Conoce Vitamin Health y nuestros canales de contacto.",
         url: canonicalUrl,
       });
     } catch (error) {
@@ -128,12 +137,15 @@ export default function Links() {
             <img src={logoUrl} alt="Vitamin Health" className="h-auto w-52 sm:w-60" />
           </a>
 
-          <p className="mt-8 text-xs font-semibold uppercase tracking-[0.24em] text-vh-lavender">Temuco, Chile</p>
-          <h1 className="mt-4 font-serif text-4xl leading-none tracking-tight text-balance sm:text-5xl">
-            Vitamin Health Temuco
+          <h1 className="mt-8 font-serif text-4xl leading-none tracking-tight text-balance sm:text-5xl">
+            Vitamin Health
           </h1>
           <p className="mx-auto mt-5 max-w-md text-sm leading-6 text-vh-white/72 sm:text-base sm:leading-7">
-            Clínica especialista en Longevidad, Medicina Estética y Sueroterapia en Temuco.
+            Medicina de longevidad, estética y bienestar
+          </p>
+          <p className="mt-4 inline-flex items-center justify-center gap-1.5 text-xs font-medium tracking-[0.08em] text-vh-lavender/75">
+            <Icon name="location" className="h-3.5 w-3.5" aria-hidden="true" />
+            Temuco, Chile
           </p>
 
           <nav className="mt-6 flex items-center justify-center gap-3" aria-label="Redes sociales">
@@ -185,7 +197,7 @@ export default function Links() {
         </nav>
 
         <footer className="mt-9 text-center text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-vh-white/45">
-          Medicina de longevidad · Temuco
+          vitaminhealth.cl
         </footer>
       </div>
     </main>
