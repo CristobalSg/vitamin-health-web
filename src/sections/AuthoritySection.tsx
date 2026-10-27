@@ -3,15 +3,24 @@ import Reveal from "@/components/Reveal";
 
 const authorityImage = new URL("../../img/equipo/doctora-camila.webp", import.meta.url).href;
 
-export default function AuthoritySection() {
+type AuthoritySectionProps = {
+  standalone?: boolean;
+};
+
+export default function AuthoritySection({ standalone = false }: AuthoritySectionProps) {
+  const Heading = standalone ? "h1" : "h2";
+
   return (
-    <section id="equipo" className="section-spacing bg-vh-navy text-vh-white">
+    <section
+      id="equipo"
+      className={standalone ? "bg-vh-navy pb-24 pt-36 text-vh-white md:pb-32 md:pt-44" : "section-spacing bg-vh-navy text-vh-white"}
+    >
       <Container className="grid items-center gap-16 lg:grid-cols-[1.1fr_0.9fr]">
         <Reveal>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-vh-lavender">Equipo profesional</p>
-          <h2 className="mt-6 max-w-4xl font-serif text-4xl leading-[1.04] tracking-tight text-balance md:text-6xl">
+          <Heading className="mt-6 max-w-4xl font-serif text-4xl leading-[1.04] tracking-tight text-balance md:text-6xl">
             Atención clínica con criterio, precisión y mirada integral
-          </h2>
+          </Heading>
           <p className="mt-7 max-w-2xl text-base leading-7 text-vh-white/75 md:text-lg md:leading-8">
             En Vitamin Health trabajamos con un equipo profesional altamente calificado, enfocado en brindar una
             atención integral, cercana y de excelencia.

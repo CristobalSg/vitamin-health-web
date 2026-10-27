@@ -14,7 +14,7 @@ export default defineConfig({
       manifest: {
         name: "Vitamin Health",
         short_name: "Vitamin Health",
-        description: "Medicina regenerativa, salud integral y tratamientos estéticos con enfoque preventivo en Temuco.",
+        description: "Clínica de medicina de longevidad, bienestar integral y medicina estética en Temuco.",
         start_url: "/",
         scope: "/",
         lang: "es",

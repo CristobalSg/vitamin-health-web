@@ -3,13 +3,19 @@ import Reveal from "@/components/Reveal";
 import { services } from "@/data/services";
 import { getServiceWhatsappUrl } from "@/utils/whatsapp";
 
-export default function ServicesSection() {
+type ServicesSectionProps = {
+  standalone?: boolean;
+};
+
+export default function ServicesSection({ standalone = false }: ServicesSectionProps) {
+  const Heading = standalone ? "h1" : "h2";
+
   return (
-    <section id="servicios" className="section-spacing">
+    <section id="servicios" className={standalone ? "pb-24 pt-36 md:pb-32 md:pt-44" : "section-spacing"}>
       <Container>
         <Reveal className="mx-auto max-w-3xl text-center">
           <p className="eyebrow">Servicios</p>
-          <h2 className="section-title mt-6">Tratamientos pensados para una salud más completa</h2>
+          <Heading className="section-title mt-6">Tratamientos pensados para una salud más completa</Heading>
         </Reveal>
 
         <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-4 md:mt-16 md:gap-6 lg:flex lg:snap-x lg:gap-6 lg:overflow-x-auto lg:overflow-y-hidden lg:pb-6 lg:[scrollbar-color:#C8C7D7_transparent] lg:[scrollbar-width:thin] lg:[&::-webkit-scrollbar]:h-1.5 lg:[&::-webkit-scrollbar-thumb]:rounded-full lg:[&::-webkit-scrollbar-thumb]:bg-vh-lavender/70 lg:[&::-webkit-scrollbar-track]:bg-transparent">

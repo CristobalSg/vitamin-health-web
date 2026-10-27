@@ -3,10 +3,12 @@ import Reveal from "@/components/Reveal";
 import { whatsappUrl } from "@/utils/whatsapp";
 
 const footerLinks = [
-  { label: "Tratamientos", href: "/#servicios" },
+  { label: "Nuestros servicios", href: "/servicios" },
   { label: "Método", href: "/#metodo" },
-  { label: "Equipo", href: "/#equipo" },
-  { label: "Contacto", href: "/#contacto" },
+  { label: "Equipo médico", href: "/equipo-medico" },
+  { label: "Ubicación y cómo llegar", href: "/ubicacion" },
+  { label: "Contáctanos", href: "/contacto" },
+  { label: "Reserva de horas", href: "/reservar-hora" },
 ];
 
 const socialLinks = [
@@ -76,6 +78,9 @@ export default function Footer() {
             <div className="mt-4 space-y-3 text-sm text-vh-blue">
               <a href="mailto:hola@vitaminhealth.cl" className="block transition-colors hover:text-vh-ink">
                 hola@vitaminhealth.cl
+              </a>
+              <a href="/ubicacion" className="block transition-colors hover:text-vh-ink">
+                Antonio Varas #687, oficina 404, Temuco
               </a>
               <p>Agenda tu evaluación personalizada.</p>
             </div>

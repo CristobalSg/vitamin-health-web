@@ -1,5 +1,4 @@
 import Container from "@/components/Container";
-import { whatsappUrl } from "@/utils/whatsapp";
 
 const heroBackground = new URL("../../img/hero-bg-treatment.webp", import.meta.url).href;
 
@@ -28,11 +27,11 @@ export default function HeroSection() {
           </p>
 
           <div className="mt-11 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <a href="/reservar-hora" className="btn-primary">
               Agendar evaluación
             </a>
             <a
-              href="#servicios"
+              href="/servicios"
               className="inline-flex min-h-12 items-center justify-center rounded-full border border-vh-white/70 bg-vh-white/10 px-7 py-4 text-sm font-semibold text-vh-white backdrop-blur transition-colors hover:bg-vh-white/20 focus:outline-none focus:ring-2 focus:ring-vh-white/80 focus:ring-offset-2 focus:ring-offset-transparent"
             >
               Conocer tratamientos

@@ -4,13 +4,22 @@ import Reveal from "@/components/Reveal";
 const mapEmbedUrl = "https://www.google.com/maps?q=Antonio+Varas+687+Temuco&output=embed";
 const mapLinkUrl = "https://www.google.com/maps/search/?api=1&query=Antonio+Varas+687+Temuco";
 
-export default function LocationSection() {
+type LocationSectionProps = {
+  standalone?: boolean;
+};
+
+export default function LocationSection({ standalone = false }: LocationSectionProps) {
+  const Heading = standalone ? "h1" : "h2";
+
   return (
-    <section className="section-spacing border-y border-black/10 bg-white">
+    <section
+      id="ubicacion"
+      className={standalone ? "border-y border-black/10 bg-white pb-24 pt-36 md:pb-32 md:pt-44" : "section-spacing border-y border-black/10 bg-white"}
+    >
       <Container>
         <Reveal className="mx-auto max-w-3xl text-center">
           <p className="eyebrow">Ubicación</p>
-          <h2 className="section-title mt-6">Encuéntranos en Temuco</h2>
+          <Heading className="section-title mt-6">Encuéntranos en Temuco</Heading>
           <p className="section-copy mx-auto mt-6 max-w-xl">Antonio Varas #687, oficina 404, Temuco</p>
         </Reveal>
 

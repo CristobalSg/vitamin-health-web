@@ -1,0 +1,133 @@
+{
+  "siteUrl": "https://www.vitaminhealth.cl",
+  "siteName": "Vitamin Health",
+  "defaultImage": "/og-vitamin-health.jpg",
+  "routes": [
+    {
+      "path": "/",
+      "title": "Vitamin Health | Medicina de Longevidad",
+      "description": "Vitamin Health es una clínica de medicina de longevidad en Temuco, enfocada en el bienestar integral, la medicina estética y una atención personalizada.",
+      "label": "Inicio",
+      "schemaType": "WebPage",
+      "kind": "home",
+      "index": true
+    },
+    {
+      "path": "/reservar-hora",
+      "title": "Reserva de horas | Vitamin Health Temuco",
+      "description": "Solicita una evaluación personalizada en Vitamin Health Temuco y consulta la disponibilidad de atención a través de WhatsApp.",
+      "label": "Reserva de horas",
+      "schemaType": "WebPage",
+      "kind": "page",
+      "index": true
+    },
+    {
+      "path": "/servicios",
+      "title": "Servicios y tratamientos | Vitamin Health",
+      "description": "Conoce los servicios de Vitamin Health en Temuco: medicina general, sueroterapia, atención psicológica y tratamientos de medicina estética.",
+      "label": "Nuestros servicios",
+      "schemaType": "CollectionPage",
+      "kind": "page",
+      "index": true
+    },
+    {
+      "path": "/equipo-medico",
+      "title": "Equipo médico | Vitamin Health Temuco",
+      "description": "Conoce al equipo profesional de Vitamin Health y su enfoque de atención clínica integral, cercana y personalizada en Temuco.",
+      "label": "Equipo médico",
+      "schemaType": "AboutPage",
+      "kind": "page",
+      "index": true
+    },
+    {
+      "path": "/ubicacion",
+      "title": "Ubicación y cómo llegar | Vitamin Health",
+      "description": "Encuentra Vitamin Health en Antonio Varas 687, oficina 404, Temuco. Consulta la ubicación y abre las indicaciones en Google Maps.",
+      "label": "Ubicación y cómo llegar",
+      "schemaType": "WebPage",
+      "kind": "page",
+      "index": true
+    },
+    {
+      "path": "/contacto",
+      "title": "Contacto | Vitamin Health Temuco",
+      "description": "Contacta a Vitamin Health en Temuco por correo electrónico o WhatsApp para resolver dudas y solicitar una evaluación personalizada.",
+      "label": "Contáctanos",
+      "schemaType": "ContactPage",
+      "kind": "page",
+      "index": true
+    },
+    {
+      "path": "/servicios/sueroterapia",
+      "title": "Sueroterapia en Temuco | Vitamin Health",
+      "description": "Conoce la sueroterapia personalizada de Vitamin Health, con evaluación profesional y protocolos definidos según cada paciente.",
+      "label": "Sueroterapia",
+      "schemaType": "MedicalWebPage",
+      "kind": "service",
+      "index": true
+    },
+    {
+      "path": "/servicios/medicina-general",
+      "title": "Medicina general en Temuco | Vitamin Health",
+      "description": "Consulta de medicina general en Vitamin Health para evaluar síntomas, revisar exámenes y orientar el cuidado integral de tu salud.",
+      "label": "Medicina general",
+      "schemaType": "MedicalWebPage",
+      "kind": "service",
+      "index": true
+    },
+    {
+      "path": "/servicios/psicologia",
+      "title": "Atención psicológica en Temuco | Vitamin Health",
+      "description": "Atención psicológica profesional, cercana y confidencial para cuidar tu bienestar emocional en Vitamin Health Temuco.",
+      "label": "Atención psicológica",
+      "schemaType": "MedicalWebPage",
+      "kind": "service",
+      "index": true
+    },
+    {
+      "path": "/servicios/acido-hialuronico",
+      "title": "Ácido hialurónico en Temuco | Vitamin Health",
+      "description": "Tratamiento personalizado con ácido hialurónico para armonizar rasgos y recuperar volumen, previa evaluación profesional.",
+      "label": "Ácido hialurónico",
+      "schemaType": "MedicalWebPage",
+      "kind": "service",
+      "index": true
+    },
+    {
+      "path": "/servicios/toxina-botulinica",
+      "title": "Toxina botulínica en Temuco | Vitamin Health",
+      "description": "Tratamiento con toxina botulínica en Vitamin Health, planificado según tu anatomía, expresión y evaluación profesional.",
+      "label": "Toxina botulínica",
+      "schemaType": "MedicalWebPage",
+      "kind": "service",
+      "index": true
+    },
+    {
+      "path": "/servicios/mesoterapia",
+      "title": "Mesoterapia en Temuco | Vitamin Health",
+      "description": "Conoce el tratamiento de mesoterapia de Vitamin Health para el cuidado de la piel, siempre con evaluación profesional previa.",
+      "label": "Mesoterapia",
+      "schemaType": "MedicalWebPage",
+      "kind": "service",
+      "index": true
+    },
+    {
+      "path": "/servicios/plasma-rico-en-plaquetas",
+      "title": "Plasma rico en plaquetas | Vitamin Health Temuco",
+      "description": "Tratamiento con plasma rico en plaquetas en Vitamin Health para apoyar procesos de regeneración de la piel o el cabello.",
+      "label": "Plasma rico en plaquetas",
+      "schemaType": "MedicalWebPage",
+      "kind": "service",
+      "index": true
+    },
+    {
+      "path": "/proposals",
+      "title": "Propuestas internas | Vitamin Health",
+      "description": "Ruta interna de propuestas visuales de Vitamin Health.",
+      "label": "Propuestas internas",
+      "schemaType": "WebPage",
+      "kind": "internal",
+      "index": false
+    }
+  ]
+}

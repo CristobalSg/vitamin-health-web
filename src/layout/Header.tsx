@@ -1,15 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 
 import Container from "@/components/Container";
-import { whatsappUrl } from "@/utils/whatsapp";
 
 const logoUrl = "/logo-vh.webp";
 
 const navigationItems = [
-  { label: "Tratamientos", href: "/#servicios" },
+  { label: "Servicios", href: "/servicios" },
   { label: "Método", href: "/#metodo" },
-  { label: "Equipo", href: "/#equipo" },
-  { label: "Contacto", href: "/#contacto" },
+  { label: "Equipo médico", href: "/equipo-medico" },
+  { label: "Ubicación", href: "/ubicacion" },
+  { label: "Contacto", href: "/contacto" },
 ];
 
 export default function Header() {
@@ -95,7 +95,7 @@ export default function Header() {
             />
           </a>
 
-          <nav className={`hidden items-center gap-10 text-sm font-medium transition-colors duration-300 lg:flex ${linkTone}`} aria-label="Principal">
+          <nav className={`hidden items-center gap-7 text-sm font-medium transition-colors duration-300 lg:flex ${linkTone}`} aria-label="Principal">
             {navigationItems.map((item) => (
               <a key={item.href} href={item.href} className="transition-colors">
                 {item.label}
@@ -104,7 +104,7 @@ export default function Header() {
           </nav>
 
           <div className="hidden items-center lg:flex">
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className={ctaClassName}>
+            <a href="/reservar-hora" className={ctaClassName}>
               Agendar evaluación
             </a>
           </div>
@@ -149,9 +149,7 @@ export default function Header() {
             ))}
             <div className={`mt-3 border-t px-4 pt-5 ${mobileCtaDividerTone}`}>
               <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/reservar-hora"
                 className={`inline-flex min-h-12 w-full items-center justify-center rounded-full px-6 py-4 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 ${mobileCtaTone}`}
                 onClick={closeMenu}
               >

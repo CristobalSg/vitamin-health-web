@@ -1,5 +1,8 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+  "routes": [
+    { "src": "^/servicios/([^/.]+)/?$", "dest": "/servicios/$1.html" },
+    { "src": "^/(reservar-hora|servicios|equipo-medico|ubicacion|contacto|proposals)/?$", "dest": "/$1.html" },
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/index.html" }
   ]
 }

@@ -1,6 +1,5 @@
 import Container from "@/components/Container";
 import Reveal from "@/components/Reveal";
-import { whatsappUrl } from "@/utils/whatsapp";
 
 export default function FinalCtaSection() {
   return (
@@ -15,7 +14,7 @@ export default function FinalCtaSection() {
             Descubre qué necesita tu cuerpo para recuperar equilibrio y bienestar
           </p>
           <div className="mt-10">
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <a href="/reservar-hora" className="btn-primary">
               Agendar evaluación
             </a>
           </div>
